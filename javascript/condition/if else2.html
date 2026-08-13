@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else</title>
+</head>
+<body>
+    <script>
+        function isArmstrong(num) {
+            let original = num;
+            let sum = 0;
+            let digits = String(num).length;
+
+            while (num > 0) {
+                let rem = num % 10;
+                sum += Math.pow(rem, digits);
+                num = Math.floor(num / 10);
+            }
+
+            return sum === original;
+        }
+
+        let number = 153;
+
+        if (isArmstrong(number)) {
+            document.write(number + " is an Armstrong number");
+        } else {
+            document.write(number + " is not an Armstrong number");
+        }
+    
+        </script>
+</body>
+</html>
