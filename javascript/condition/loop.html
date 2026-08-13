@@ -10,8 +10,10 @@
         const car = ["BMW", "Volvo", "Saab", "Ford" , "Fiat", "Audi"];
         for (let i = 0; i < car.length; i++) {
             document.write( + i + ": " + car[i] + "<br>");
+
         }
+        document.getElementById("demo").innerHTML = car;
     </script>
-    
+    <p id="demo"></p>
 </body>
 </html>
