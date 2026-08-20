@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring </title>
+</head>
+<body>
+    <script>
+        const student = {
+            name: "John",
+            age: 20,
+            address: {
+                city: "New York",
+                state: "NY"
+            }
+        };
+        const { name, age, address: { city, state } } = student;
+        document.write("Name: ", student.name, "<br>");
+        document.write("Age: ", student.age, "<br>");
+        document.write("City: ", student.address.city, "<br>");
+        document.write("State: ", student.address.state, "<br>");
+    </script>
+</body>
+</html>
