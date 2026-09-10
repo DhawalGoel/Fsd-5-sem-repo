@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY SHOP</title>
+  </head>
+  <style>
+    table {
+      width: 80%;
+      margin: auto;
+      padding: 10px;
+      font-size: 25px;
+      color: #eb1616;
+    }
+    table,
+    th,
+    td {
+      border: 1px solid #dc11f7;
+    }
+  </style>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>S.no.</th>
+          <th>Title</th>
+          <th>image</th>
+          <th>Category</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="data"></tbody>
+    </table>
+    <script>
+      const ele = document.getElementById("data");
+      const url = "https://dummyjson.com/products";
+      async function loadData(){
+          try{
+              const res = await fetch (URL);
+              const data = await res.json();
+              
+            }
+
+          catch(){
+
+          }
+      }
+      loadData();
+    </script>
+  </body>
+</html>
