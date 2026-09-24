@@ -1,10 +1,10 @@
 import React from 'react'
-import Hotel from './components/Hotel'
-
+import Student from './components/Student.jsx'
  const App = () => {
   return (
     <div>
-      <Hotel />
+      
+      <Student />
     </div>
   )
 }
