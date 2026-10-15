@@ -1,4 +1,4 @@
-import React from 'react'
+    import React,{useState , useEffect} from 'react'
 
 const App = () => {
   const [formData, setFormData] = useState({
@@ -6,7 +6,9 @@ const App = () => {
     email: '',
     password: ''
   })
+
 useEffect(() => {
+  console.log('Form Data Updated:', formData)
 },[formData])
 
 const handleChange = (e) => {
@@ -17,17 +19,18 @@ const handleChange = (e) => {
 }
 const handleSubmit = (e) => {
   e.preventDefault()
+  alert('Form submitted successfully!')
   console.log(formData)
 }
 
   return (
     <div>
-      <form action="">
-        <input type="text"  placeholder='Enter your name' value={formData.name} onChange={handleChange}/>
+      <form action="" onSubmit={handleSubmit}>
+        <input type="text" name="name"  placeholder='Enter your name' value={formData.name} onChange={handleChange}></input>
         <br />
-        <input type="email"  placeholder='Enter your email' value={formData.email} onChange={handleChange}/>
+        <input type="email" name="email"  placeholder='Enter your email' value={formData.email} onChange={handleChange}></input>
         <br />
-        <input type="password"  placeholder='Enter your password' value={formData.password} onChange={handleChange}/>
+        <input type="password" name="password"  placeholder='Enter your password' value={formData.password} onChange={handleChange}></input>
         <br />
         <button type="submit">Submit</button>
       </form>
